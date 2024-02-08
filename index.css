@@ -13,14 +13,14 @@
     -o-background-size: cover;
     background-size: cover;
 }
-/* .bird {
+.bird {
 	height: 100px;
 	width: 130px;
 	position: fixed;
 	top: 40vh;
 	left: 30vw;
 	z-index: 100;
-} */
+}
 .pipe_sprite {
 	position: fixed;
 	top: 40vh;

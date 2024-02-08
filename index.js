@@ -2,7 +2,7 @@ let move_speed = 6, grativy = 0.5;
 let bird = document.querySelector('.bird');
 let img = document.getElementById('bird-1');
 let sound_point = new Audio('sounds/point.mp3');
-let sound_die = new Audio('sounds/die.mp3');
+let sound_die = new Audio('sounds/gtaover.mp3');
 
 // getting bird element properties
 let bird_props = bird.getBoundingClientRect();
@@ -18,6 +18,8 @@ let game_state = 'Start';
 img.style.display = 'none';
 message.classList.add('messageStyle');
 
+
+// function when the game is over press any key to restart a new game
 document.addEventListener('keydown', (e) => {
     
     if(e.key == 'Enter' && game_state != 'Play'){
@@ -34,6 +36,8 @@ document.addEventListener('keydown', (e) => {
         play();
     }
 });
+
+// function when start game an dmake a bird fly and try to make scores
 
 function play(){
     function move(){
@@ -101,6 +105,7 @@ function play(){
 
     let pipe_gap = 35;
 
+    // function make pipes 
     function create_pipe(){
         if(game_state != 'Play') return;
 
